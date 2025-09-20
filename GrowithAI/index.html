@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowithAI – Smarter Growth. Powered by AI.</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Particle Background -->
+  <div class="particle-bg" id="particleContainer"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed w-full z-50 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <div class="logo-container flex items-center space-x-3">
+          <img src="growithai logo2.png" alt="GrowithAI Logo" class="h-10 w-auto">
+          <span class="text-2xl font-bold hero-text">GrowithAI</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#services" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">Services</a>
+          <a href="#pricing" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">Pricing</a>
+          <a href="#chatbot" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">Demo</a>
+          <a href="#testimonials" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">Reviews</a>
+          <button class="glow-button text-white px-6 py-2 rounded-full font-medium">Get Started</button>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-300 hover:text-white">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden mobile-menu px-4 pt-2 pb-3 space-y-1">
+      <a href="#services" class="block px-3 py-2 text-gray-300 hover:text-white">Services</a>
+      <a href="#pricing" class="block px-3 py-2 text-gray-300 hover:text-white">Pricing</a>
+      <a href="#chatbot" class="block px-3 py-2 text-gray-300 hover:text-white">Demo</a>
+      <a href="#testimonials" class="block px-3 py-2 text-gray-300 hover:text-white">Reviews</a>
+      <button class="glow-button block px-3 py-2 text-white rounded-full text-center mt-2 w-full">Get Started</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 gradient-bg relative overflow-hidden min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+          <div class="typing-animation mb-6">
+            <h1 class="text-4xl md:text-7xl font-black hero-text">GrowithAI</h1>
+          </div>
+          <p class="text-xl md:text-3xl mb-6 text-gray-300 font-light">Smarter Growth. <span class="text-purple-400">Powered by AI</span>.</p>
+          <p class="text-lg mb-8 text-gray-400 leading-relaxed">Transform your business with cutting-edge AI solutions that automate processes, generate qualified leads, and accelerate growth through intelligent automation.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <button class="glow-button text-white font-semibold px-8 py-4 rounded-full shadow-lg">Explore Solutions</button>
+            <button class="glass-morphism border-2 border-gray-600 text-white font-semibold px-8 py-4 rounded-full hover:border-purple-500 transition-all duration-300">Free Consultation</button>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur-3xl opacity-30 pulse-glow"></div>
+            <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-development-6521720_1280.jpg" alt="AI Technology" class="relative rounded-3xl shadow-2xl floating max-w-full h-auto border border-gray-700">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section-bg py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="fade-in-up">
+          <div class="stats-counter" data-target="250">0</div>
+          <p class="text-gray-400 text-lg">Happy Clients</p>
+        </div>
+        <div class="fade-in-up">
+          <div class="stats-counter" data-target="98">0</div>
+          <p class="text-gray-400 text-lg">Satisfaction Rate</p>
+        </div>
+        <div class="fade-in-up">
+          <div class="stats-counter" data-target="40">0</div>
+          <p class="text-gray-400 text-lg">Avg. Growth</p>
+        </div>
+        <div class="fade-in-up">
+          <p class="stats-counter">24/7</p>
+          <p class="text-gray-400 text-lg">Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 hero-text">AI-Powered Solutions</h2>
+      <p class="text-gray-400 text-xl max-w-3xl mx-auto">Comprehensive AI tools designed to transform your business operations and accelerate growth.</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="service-card rounded-3xl p-8 group">
+        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-robot text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">AI Customer Support</h3>
+        <p class="text-gray-400 leading-relaxed">Intelligent chatbots and WhatsApp automation providing 24/7 customer support with human-like interactions and instant responses.</p>
+      </div>
+
+      <div class="service-card rounded-3xl p-8 group">
+        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-bullseye text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">Smart Lead Generation</h3>
+        <p class="text-gray-400 leading-relaxed">Advanced AI algorithms that identify, target, and convert high-quality leads automatically, boosting your sales pipeline.</p>
+      </div>
+
+      <div class="service-card rounded-3xl p-8 group">
+        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-cogs text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">Process Automation</h3>
+        <p class="text-gray-400 leading-relaxed">Seamlessly connect applications and automate repetitive workflows, saving valuable time and reducing human error.</p>
+      </div>
+
+      <div class="service-card rounded-3xl p-8 group">
+        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-chart-line text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">Intelligent Dashboards</h3>
+        <p class="text-gray-400 leading-relaxed">Real-time analytics and KPI visualization with AI-powered insights for data-driven decision making.</p>
+      </div>
+
+      <div class="service-card rounded-3xl p-8 group">
+        <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-brain text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">Predictive Analytics</h3>
+        <p class="text-gray-400 leading-relaxed">Machine learning models for sales forecasting, customer behavior prediction, and strategic business planning.</p>
+      </div>
+
+      <div class="service-card rounded-3xl p-8 group">
+        <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-rocket text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">Growth Optimization</h3>
+        <p class="text-gray-400 leading-relaxed">AI-driven SEO, conversion optimization, and performance enhancement for maximum business growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Demo Section -->
+  <section id="chatbot" class="section-bg py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 hero-text">Experience AI in Action</h2>
+        <p class="text-gray-400 text-xl max-w-3xl mx-auto">Interact with our advanced AI assistant and see how it can transform your customer engagement.</p>
+      </div>
+      
+      <div class="max-w-3xl mx-auto glass-morphism rounded-3xl overflow-hidden border border-gray-700">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-xl font-bold">GrowithAI Assistant</h3>
+              <p class="text-sm opacity-90">AI-powered support • <span class="text-green-300">●</span> Online</p>
+            </div>
+            <div class="flex space-x-2">
+              <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+              <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="chat-container h-96 overflow-y-auto p-6">
+          <div class="chat-message">
+            <div class="flex items-start mb-6">
+              <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                <i class="fas fa-robot text-white"></i>
+              </div>
+              <div class="glass-morphism rounded-2xl px-6 py-3 border border-gray-600 max-w-md">
+                <p class="text-white">Hello! I'm your AI assistant from GrowithAI. I can help you discover how our solutions can transform your business. What would you like to know?</p>
+              </div>
+            </div>
+          </div>
+          
+          <div id="chat-messages"></div>
+        </div>
+        
+        <div class="p-6 border-t border-gray-700">
+          <div class="flex items-center space-x-3">
+            <input 
+              id="chat-input" 
+              type="text" 
+              placeholder="Ask me anything about our AI solutions..." 
+              class="flex-1 glass-morphism border border-gray-600 rounded-full px-6 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            >
+            <button id="send-btn" class="glow-button rounded-full w-12 h-12 flex items-center justify-center">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <button class="demo-question glass-morphism text-sm px-4 py-2 rounded-full border border-gray-600 text-gray-300 hover:text-white hover:border-purple-500 transition-all">
+              How does AI lead generation work?
+            </button>
+            <button class="demo-question glass-morphism text-sm px-4 py-2 rounded-full border border-gray-600 text-gray-300 hover:text-white hover:border-purple-500 transition-all">
+              What's included in the Growth plan?
+            </button>
+            <button class="demo-question glass-morphism text-sm px-4 py-2 rounded-full border border-gray-600 text-gray-300 hover:text-white hover:border-purple-500 transition-all">
+              Can you integrate with our existing tools?
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 hero-text">Choose Your Growth Plan</h2>
+      <p class="text-gray-400 text-xl max-w-3xl mx-auto">Flexible pricing options designed to scale with your business needs.</p>
+    </div>
+    
+    <div class="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+      <div class="pricing-card p-8 rounded-3xl text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-seedling text-white text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2 text-white">Starter</h3>
+        <p class="text-gray-400 mb-6">Perfect for small businesses</p>
+        <div class="mb-8">
+          <span class="text-5xl font-bold text-white">$199</span>
+          <span class="text-gray-400 text-lg">/month</span>
+        </div>
+        <ul class="text-gray-300 mb-8 space-y-3">
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>AI Chatbot Integration</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Basic Process Automation</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Website Performance Audit</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Email Support</li>
+        </ul>
+        <button class="glow-button w-full py-3 rounded-full font-semibold">Get Started</button>
+      </div>
+
+      <div class="pricing-card featured p-8 rounded-3xl text-center relative">
+        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span class="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-4 py-2 rounded-full">MOST POPULAR</span>
+        </div>
+        <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-rocket text-white text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2 text-white">Growth</h3>
+        <p class="text-gray-300 mb-6">Best for growing companies</p>
+        <div class="mb-8">
+          <span class="text-5xl font-bold text-white">$399</span>
+          <span class="text-gray-400 text-lg">/month</span>
+        </div>
+        <ul class="text-gray-300 mb-8 space-y-3">
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Everything in Starter</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>AI Lead Generation</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Smart Analytics Dashboard</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Basic Predictive Analysis</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Priority Support</li>
+        </ul>
+        <button class="bg-white text-purple-700 w-full py-3 rounded-full font-semibold hover:bg-gray-100 transition-all">Get Started</button>
+      </div>
+
+      <div class="pricing-card p-8 rounded-3xl text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-crown text-white text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2 text-white">Scale</h3>
+        <p class="text-gray-400 mb-6">For established businesses</p>
+        <div class="mb-8">
+          <span class="text-5xl font-bold text-white">$999</span>
+          <span class="text-gray-400 text-lg">/month</span>
+        </div>
+        <ul class="text-gray-300 mb-8 space-y-3">
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Everything in Growth</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Advanced Predictive Analytics</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Custom AI Model Training</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>White-label Solutions</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Dedicated Account Manager</li>
+        </ul>
+        <button class="glow-button w-full py-3 rounded-full font-semibold">Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section-bg py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 hero-text">Client Success Stories</h2>
+        <p class="text-gray-400 text-xl max-w-3xl mx-auto">See how businesses are transforming with our AI solutions.</p>
+      </div>
+      
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="testimonial-card p-8 rounded-3xl">
+          <div class="flex items-center mb-6">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="Sarah Chen" class="client-image mr-4">
+            <div>
+              <h4 class="font-bold text-white text-lg">Sarah Chen</h4>
+              <p class="text-sm text-gray-400">CEO, TechVenture Labs</p>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6 leading-relaxed">"GrowithAI's chatbot revolutionized our customer support. We saw an 80% reduction in response time and our team can now focus on strategic initiatives."</p>
+          <div class="flex mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <div class="text-sm text-gray-400">
+            <i class="fas fa-chart-line mr-2"></i>80% faster response times
+          </div>
+        </div>
+        
+        <div class="testimonial-card p-8 rounded-3xl">
+          <div class="flex items-center mb-6">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Marcus Rodriguez" class="client-image mr-4">
+            <div>
+              <h4 class="font-bold text-white text-lg">Marcus Rodriguez</h4>
+              <p class="text-sm text-gray-400">Owner, Feasty Republic</p>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6 leading-relaxed">"GrowithAI transformed our reservation system and customer engagement. The AI chatbot handles 90% of reservation requests and upselling questions, allowing our staff to focus on food quality and service. We've seen a 35% increase in repeat customers and a 22% boost in average order value through personalized recommendations."</p>
+          <div class="flex mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <div class="text-sm text-gray-400">
+            <i class="fas fa-utensils mr-2"></i>35% increase in repeat customers
+          </div>
+        </div>
+        
+        <div class="testimonial-card p-8 rounded-3xl">
+          <div class="flex items-center mb-6">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="Emma Thompson" class="client-image mr-4">
+            <div>
+              <h4 class="font-bold text-white text-lg">Lemina Idoko</h4>
+              <p class="text-sm text-gray-400">Founder, RadiantClean</p>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6 leading-relaxed">"The AI-powered scheduling and customer management system from GrowithAI has revolutionized our operations. We've reduced no-shows by 75% with automated reminders and optimized our technician routes to serve 40% more clients daily. The lead generation AI identifies commercial clients with the highest conversion potential, increasing our B2B contracts by 60% in just 6 months."</p>
+          <div class="flex mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <div class="text-sm text-gray-400">
+          <i class="fas fa-calendar-check mr-2"></i>75% reduction in no-shows
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+    <div class="glass-morphism rounded-3xl p-8 md:p-16 border border-gray-700">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 hero-text">Ready to Transform Your Business?</h2>
+          <p class="text-xl text-gray-300 mb-8 leading-relaxed">Let's discuss how GrowithAI can automate your processes, generate quality leads, and accelerate your growth with cutting-edge AI solutions.</p>
+          
+          <div class="space-y-6">
+            <div class="flex items-center group">
+              <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                <i class="fas fa-phone text-white"></i>
+              </div>
+              <div>
+                <p class="text-white font-semibold">+1 (555) 123-4567</p>
+                <p class="text-gray-400 text-sm">Available 24/7 for consultations</p>
+              </div>
+            </div>
+            <div class="flex items-center group">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                <i class="fas fa-envelope text-white"></i>
+              </div>
+              <div>
+                <p class="text-white font-semibold">hello@growithai.com</p>
+                <p class="text-gray-400 text-sm">Get a response within 2 hours</p>
+              </div>
+            </div>
+            <div class="flex items-center group">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                <i class="fas fa-map-marker-alt text-white"></i>
+              </div>
+              <div>
+                <p class="text-white font-semibold">San Francisco, CA</p>
+                <p class="text-gray-400 text-sm">Serving clients worldwide</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-4">
+              <input 
+                type="text" 
+                placeholder="First Name" 
+                class="glass-morphism p-4 rounded-xl border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+              >
+              <input 
+                type="text" 
+                placeholder="Last Name" 
+                class="glass-morphism p-4 rounded-xl border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+              >
+            </div>
+            <input 
+              type="email" 
+              placeholder="Business Email" 
+              class="w-full glass-morphism p-4 rounded-xl border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+            >
+            <input 
+              type="text" 
+              placeholder="Company Name" 
+              class="w-full glass-morphism p-4 rounded-xl border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+            >
+            <textarea 
+              placeholder="Tell us about your business challenges and goals..." 
+              rows="4" 
+              class="w-full glass-morphism p-4 rounded-xl border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"
+            ></textarea>
+            <button class="glow-button w-full py-4 rounded-xl font-semibold text-lg">
+              Schedule Free Consultation
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-50 py-16 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <img src="growithai logo2.png" alt="GrowithAI Logo" class="h-10 w-auto">
+            <span class="text-2xl font-bold hero-text">GrowithAI</span>
+          </div>
+          <p class="text-gray-400 mb-6">Smarter Growth. Powered by AI.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 glass-morphism rounded-full flex items-center justify-center text-gray-400 hover:text-white border border-gray-700 hover:border-purple-500 transition-all">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="w-10 h-10 glass-morphism rounded-full flex items-center justify-center text-gray-400 hover:text-white border border-gray-700 hover:border-purple-500 transition-all">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="w-10 h-10 glass-morphism rounded-full flex items-center justify-center text-gray-400 hover:text-white border border-gray-700 hover:border-purple-500 transition-all">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="w-10 h-10 glass-morphism rounded-full flex items-center justify-center text-gray-400 hover:text-white border border-gray-700 hover:border-purple-500 transition-all">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-6 text-lg">Solutions</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">AI Customer Support</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Lead Generation</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Process Automation</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Predictive Analytics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-6 text-lg">Company</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Careers</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Case Studies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-6 text-lg">Support</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Documentation</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 transform duration-200">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-gray-400">© <span id="year"></span> GrowithAI – A Subsidiary of MI KA EL Global. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
